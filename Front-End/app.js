@@ -8,7 +8,7 @@
 const RODANDO_LOCAL = ["", "localhost", "127.0.0.1"].includes(window.location.hostname);
 const API_BASE_URL = RODANDO_LOCAL
     ? "http://127.0.0.1:8000"
-    : "https://album-meu-production-cbec.up.railway.app";
+    : "https://album-meu-production-d512.up.railway.app";
 
 
 // ===================================================
