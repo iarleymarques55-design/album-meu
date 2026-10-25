@@ -3,7 +3,12 @@
 // Quando o frontend for servido pelo FastAPI (Dia 3), a API está
 // no mesmo servidor — usamos uma URL relativa ou o endereço completo.
 // ===================================================
-const API_BASE_URL = "https://album-meu-production-cbec.up.railway.app/";
+// Rodando localmente (arquivo aberto direto ou localhost) usa o backend local;
+// publicado, usa a API no Railway. Sem barra no final, senão vira "//figurinhas".
+const RODANDO_LOCAL = ["", "localhost", "127.0.0.1"].includes(window.location.hostname);
+const API_BASE_URL = RODANDO_LOCAL
+    ? "http://127.0.0.1:8000"
+    : "https://album-meu-production-cbec.up.railway.app";
 
 
 // ===================================================
